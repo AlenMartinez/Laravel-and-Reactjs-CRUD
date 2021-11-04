@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container,Row,Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './components/NavBar';
+import TableDate from './components/TableDate';
+import FormDate from './components/FormDate';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Container fluid>
+            <Row>
+                  <Col>
+                    <NavBar/>
+                  </Col>
+              </Row>
+                <Row>
+                    <Col sm={8}>
+                      <TableDate/>
+                    </Col>
+                  <Col sm={4}>
+                      <FormDate/>
+                    </Col>
+                </Row>
+        </Container>
     </div>
   );
 }
